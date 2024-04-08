@@ -2,11 +2,11 @@
 
 int main(void) {
 	logger = log_create("log.log", "Servidor", 1, LOG_LEVEL_DEBUG);
-
+	log_info(logger, "INicia el servidor wacho");
 	int server_fd = iniciar_servidor();
 	log_info(logger, "Servidor listo para recibir al cliente");
 	int cliente_fd = esperar_cliente(server_fd);
-
+	log_info(logger, "Se ejecuto esperar cliente?");
 	t_list* lista;
 	while (1) {
 		int cod_op = recibir_operacion(cliente_fd);
