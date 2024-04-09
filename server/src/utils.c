@@ -41,9 +41,9 @@ int esperar_cliente(int socket_servidor)
 	logger = log_create("log.log", "Servidor", 1, LOG_LEVEL_DEBUG);
 	struct addrinfo hints, *servinfo;
 	// Aceptamos un nuevo cliente
-	log_info(logger, "ENTRA AL ACCEPT? LA PUTA MADRE.");
+
 	int conexion_servidor_cliente = accept(socket_servidor, NULL, NULL);
-	log_info(logger, "FUNCIONA LA CONCHA DE A LORAAAAA");
+
 	size_t bytes;
 
 	int32_t handshake;

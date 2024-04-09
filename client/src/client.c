@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-char* ruta_logs = "/home/utnso/Desktop/DANI/tp0Logs/tp0.log"; 
+char* ruta_logs = "./tp0.log"; 
 char* nombre_proceso_logs = "Cliente";
 
 int main(void)
@@ -56,11 +56,11 @@ int main(void)
 	conexion = crear_conexion(ip, puerto);
 
 	// Enviamos al servidor el valor de CLAVE como mensaje
-	printf("Acá se me cuelga Luego de conexion.\n");
+
 
 	enviar_mensaje(valor, conexion);
 
-	printf("Acá se me cuelga. Luego de enviar mensaje\n");
+
      
 	// Armamos y enviamos el paquete
 	paquete(conexion);
@@ -97,7 +97,7 @@ t_config* iniciar_config(void)
 {
 	t_config* nuevo_config;
 
-	nuevo_config = config_create("/home/utnso/Desktop/DANI/tp0/client/cliente.config");
+	nuevo_config = config_create("./cliente.config");
 
 	if (nuevo_config == NULL) {
 		printf("Error al cargar la configuración desde el archivo.\n");
