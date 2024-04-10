@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-char* ruta_logs = "./tp0.log"; 
+char* ruta_logs = "../tp0.log"; 
 char* nombre_proceso_logs = "Cliente";
 
 int main(void)
@@ -83,7 +83,7 @@ t_log* iniciar_logger(void)
         return 1; // Termina el programa con un código de error
     }
 
-	// Usando el logger creado previamente
+	// Usando el logger creado previamentegit 
 	// Escribi: "Hola! Soy un log"
 
 	log_info(nuevo_logger, "HOla! Soy un log");
@@ -96,9 +96,8 @@ t_log* iniciar_logger(void)
 t_config* iniciar_config(void)
 {
 	t_config* nuevo_config;
-	printf("entramos al config");
+	
 	nuevo_config = config_create("../cliente.config");
-	printf("Se traba en el config?");
 	if (nuevo_config == NULL) {
 		printf("Error al cargar la configuración desde el archivo.\n");
     // ¡No se pudo crear el config!
