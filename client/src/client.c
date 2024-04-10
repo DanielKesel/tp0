@@ -96,9 +96,9 @@ t_log* iniciar_logger(void)
 t_config* iniciar_config(void)
 {
 	t_config* nuevo_config;
-
-	nuevo_config = config_create("./cliente.config");
-
+	printf("entramos al config");
+	nuevo_config = config_create("../cliente.config");
+	printf("Se traba en el config?");
 	if (nuevo_config == NULL) {
 		printf("Error al cargar la configuración desde el archivo.\n");
     // ¡No se pudo crear el config!
