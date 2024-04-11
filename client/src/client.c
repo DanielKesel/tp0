@@ -186,4 +186,5 @@ void terminar_programa(int conexion, t_log* logger, t_config* config)
 	log_destroy(logger);
 	config_destroy(config);
 	liberar_conexion(conexion);
+	printf("ADIOS!");
 }
