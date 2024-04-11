@@ -1,0 +1,14 @@
+t_config* iniciar_config(void)
+{
+	t_config* nuevo_config;
+	
+	nuevo_config = config_create("../cliente.config");
+	if (nuevo_config == NULL) {
+		printf("Error al cargar la configuración desde el archivo.\n");
+    // ¡No se pudo crear el config!
+    // Terminemos el programa
+	}
+
+	return nuevo_config;
+
+}
