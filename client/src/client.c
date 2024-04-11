@@ -8,7 +8,7 @@ char* nombre_proceso_logs = "Cliente";
 
 int main(void)
 {
-
+	printf("HOLA");
 	char cwd[1024]; // Se reserva espacio para el directorio de trabajo actual
 
     if (getcwd(cwd, sizeof(cwd)) != NULL) { // Se intenta obtener el directorio de trabajo actual
