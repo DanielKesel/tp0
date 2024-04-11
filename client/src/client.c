@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-char* ruta_logs = "../tp0.log"; 
+
 char* nombre_proceso_logs = "Cliente";
 
 int main(void)
@@ -86,7 +86,7 @@ t_log* iniciar_logger(void)
 {
 
 	t_log* nuevo_logger;
-
+	char* ruta_logs = "../tp0.log"; 
 	nuevo_logger = log_create(ruta_logs, nombre_proceso_logs, true, LOG_LEVEL_INFO);
 
 	if (nuevo_logger == NULL) {
