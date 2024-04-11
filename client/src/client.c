@@ -14,6 +14,7 @@ int main(void)
     if (getcwd(cwd, sizeof(cwd)) != NULL) { // Se intenta obtener el directorio de trabajo actual
         printf("Directorio de trabajo actual: %s\n", cwd);
     } else {
+		printf("NO?");
         perror("getcwd() error");
         return 1;
     }
